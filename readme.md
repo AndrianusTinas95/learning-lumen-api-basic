@@ -14,3 +14,6 @@ Lumen Framework API Tutorial
 12. Lumen Request - Mengambil Nilai Input Menggunakan Request
 13. Menampilkan Response dari suatu Request - Lumen Response
 14. Menggunakan Authentication pada Framework Lumen
+15. Membuat Fungsi Register pada Framework Lumen
+16. Membuat Fungsi Login pada Framework Lumen
+17. Menggunakan API Token pada Framework Lumen

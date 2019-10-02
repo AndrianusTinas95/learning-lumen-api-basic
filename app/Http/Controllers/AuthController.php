@@ -41,6 +41,46 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
+        try {
+            $email = $request->input('email');
+        $password = $request->input('password');
+
+        $user = User::where('email',$email)->first();
+
+        if($user && Hash::check($password,$user->password)){
+            $apiToken = base64_encode(uniqid().uniqid().uniqid().uniqid());
+
+            $user->update([
+                'api_token' =>$apiToken
+            ]);
+
+            return response()->json([
+                'success'   => true,
+                'message'   => 'Login Success',
+                'data'      => [
+                    'user'      => $user,
+                    'api_token' => $apiToken
+                ],
+            ],201);
         
+        }else{
+        
+            return response()->json([
+                'success'   => false,
+                'message'   => 'Login Fail',
+                'data'      => 'Email Or Password False',
+            ],400);
+        
+        }
+
+        } catch (Exception $e) {
+        
+            return response()->json([
+                'success'   => false,
+                'message'   => 'Login Fail',
+                'data'      => $e->getMessage(),
+            ],400);
+        
+        }
     }
 }

@@ -13,3 +13,4 @@ Lumen Framework API Tutorial
 11. Lumen Request - Menggunakan Request Handler pada Controller
 12. Lumen Request - Mengambil Nilai Input Menggunakan Request
 13. Menampilkan Response dari suatu Request - Lumen Response
+14. Menggunakan Authentication pada Framework Lumen

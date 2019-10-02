@@ -72,3 +72,5 @@ $router->post('/bar/foo',['uses'=>'ExampleController@fooBar']);
 
 $router->post('/user/profile/req',['uses'=>'ExampleController@userProfile']);
 
+$router->get('/response',['uses'=>'ExampleController@response']);
+

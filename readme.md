@@ -12,3 +12,4 @@ Lumen Framework API Tutorial
 10. Lumen Controller - Implementasi Middleware pada Controller
 11. Lumen Request - Menggunakan Request Handler pada Controller
 12. Lumen Request - Mengambil Nilai Input Menggunakan Request
+13. Menampilkan Response dari suatu Request - Lumen Response

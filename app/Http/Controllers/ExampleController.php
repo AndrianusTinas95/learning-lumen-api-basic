@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ExampleController extends Controller
 {
@@ -65,5 +66,13 @@ class ExampleController extends Controller
         // }
         // return $request->only('username','password');
         return $request->except('username','password');
+    }
+
+    public function response(){
+        // $data['content']='Data Successful created ! ';
+        // return (new Response($data,201))->header('Content-Type','application/json');
+        // return response($data,201);
+        return response()->json(['message'=>'Fail! Not Found',
+        'status'=>false],404);
     }
 }
